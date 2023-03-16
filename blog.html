@@ -31,8 +31,7 @@
 
       <p>
         Map function received a function as parameter and this function not
-        <br />
-        modify original array return new array
+        <br />j modify original array return new array
       </p>
       <div class="bg-slate-500 p-10 rounded-md">
         <code>
@@ -110,13 +109,13 @@
       >
     </summary>
     <article>
-      <code class="font-bold text-3xl">localStorage</code><br />
+      <code class="font-bold text-xl">localStorage</code><br />
       <p>
         Local Storage is a Browser storage it is sort of data store browser
         read-only The store capacity 5/10MB is is not session base it is deleted
         by javascript or manually
       </p>
-      <span class="font-bold text-2xl">localStorage Methods :</span>
+      <span class="font-bold text-sm">localStorage Methods :</span>
       <ul class="space-y-2">
         <li>setItem() Method</li>
         <li>getItem() Method</li>
@@ -125,14 +124,14 @@
       </ul>
     </article>
     <article>
-      <code class="font-bold text-3xl">sessionStorage</code>
+      <code class="font-bold text-xl">sessionStorage</code>
       <br />
       <p>
         Session Storage is a session base that mens browser tab open for create
         session if you close tab autometically remove session storage this is
         store 5MB
       </p>
-      <span class="font-bold text-2xl">localStorage Methods :</span>
+      <span class="font-bold text-sm">localStorage Methods :</span>
       <ul class="space-y-2">
         <li>setItem() Method</li>
         <li>getItem() Method</li>
@@ -141,13 +140,84 @@
       </ul>
     </article>
     <article>
-      <code class="text-3xl font-bold">cookie</code>
+      <code class="text-xl font-bold">cookie</code>
       <br />
       <p>
         cookie is store data settings , Tab and window basis. The storage
         capacity 4KB cookie client and server both side read and write the
         cookie
       </p>
+    </article>
+
+    <summary>
+      <span class="text-3xl font-bold"
+        >in this tutorial you will learn about event loop
+      </span>
+    </summary>
+
+    <article>
+      <p>
+        javascript is a single threaded language . This mens javascript at a
+        time working one work suppose you write while loop this loop print
+        <code>1 to 100000000</code> this is not finished cannot execute next
+        code because this is asynchronous oparetion and this time browser is
+        hang. becuse javascript first working synchronous oparetion and then
+        javascript event loop listen asynchronous opretion is done if
+        asynchronous is done event fire then stack state asynchronous oparetion
+        example bellow:
+      </p>
+      <div>
+        <div class="bg-slate-500 p-10 rounded-md">
+          <span class="font-bold text-xl">This is synchronous oparetion</span>
+          <br />
+          <code>
+            function task(message) { // emulate time consuming task
+            <br />
+            let n = 10000000000;
+            <br />
+
+            while (n > 0){ n--; }
+            <br />
+            console.log(message); }
+            <br />
+
+            console.log('Start script...');
+            <br />
+            task('Call an API');
+            <br />
+            console.log('Done!');
+            <br />
+
+            <div class="bg-slate-200 p-2 rounded-md">
+              <span>
+                output : Start script... <br />
+                Download a file. <br />
+                Done!
+              </span>
+            </div>
+          </code>
+        </div>
+        <div class="bg-slate-500 p-10 rounded-md">
+          <span class="font-bold text-xl">This is asynchronous oparetion</span>
+          <br />
+          <code>
+            console.log('Start script...');
+            <br />
+
+            setTimeout(() => { task('Download a file.'); }, 1000);
+            <br />
+            console.log('Done!');
+            <br />
+            <div class="bg-slate-200 p-2 rounded-md">
+              <span>
+                Start script... <br />
+                Done! <br />
+                Download a file.
+              </span>
+            </div>
+          </code>
+        </div>
+      </div>
     </article>
   </body>
 </html>
