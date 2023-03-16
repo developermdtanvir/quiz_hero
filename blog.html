@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Blog</title>
+  </head>
+  <body class="max-w-screen-md mx-auto space-y-10">
+    <h1 class="text-3xl font-bold">
+      Diffrance between javascript map() filter() forEach() find()
+    </h1>
+    <br />
+    <article class="space-y-2" id="#map">
+      <code class="bg-slate-100 rounded p-2">map()</code>
+
+      <p>
+        Map function received a function as parameter and this function not
+        <br />
+        modify original array return new array
+      </p>
+    </article>
+    <article class="space-y-2">
+      <code class="bg-slate-100 p-2">forEach()</code>
+      <br />
+      <p>
+        ForEach function received a function as a parameter and forEach <br />
+        function
+        <br />
+        not modify this array and forEach function not return this is always
+        undefined
+      </p>
+    </article>
+
+    <article class="space-y-2">
+      <code class="bg-slate-100 p-2">filter()</code>
+      <p>
+        filter function received a function as a parameter if not match a any
+        <br />
+        data filter function return empty array elsif match anything data <br />
+        function return this result inner array
+      </p>
+    </article>
+
+    <article class="space-y-2">
+      <code class="bg-slate-100 p-2">find()</code>
+
+      <p>
+        javascript find function argument another function this return only
+        first result match
+      </p>
+
+      <code class="space-y-10">
+        let numbers = [1,2,3,4,5]
+        <br />
+        console.log(numbers.map(number => number%2 === 0))
+        <br />
+        output : 2
+      </code>
+    </article>
+  </body>
+</html>
