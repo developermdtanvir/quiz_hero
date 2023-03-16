@@ -19,9 +19,12 @@
     <title>Blog</title>
   </head>
   <body class="max-w-screen-md mx-auto space-y-10">
-    <h1 class="text-3xl font-bold">
-      Diffrance between javascript map() filter() forEach() find()
-    </h1>
+    <summary class="text-2xl">
+      <span class="font-bold"
+        >summary: in this tutorial you will learn about diffreance between map,
+        filter, forEach, find</span
+      >
+    </summary>
     <br />
     <article class="space-y-2" id="#map">
       <code class="bg-slate-100 rounded p-2">map()</code>
@@ -31,6 +34,15 @@
         <br />
         modify original array return new array
       </p>
+      <div class="bg-slate-500 p-10 rounded-md">
+        <code>
+          let numbers = [1,2,3,4]
+          <br />
+          console.log(numbers.map(number => number % 2 === 0))
+          <br />
+          output : <span class="bg-slate-200 p-2">[false,true,false,true]</span>
+        </code>
+      </div>
     </article>
     <article class="space-y-2">
       <code class="bg-slate-100 p-2">forEach()</code>
@@ -42,6 +54,15 @@
         not modify this array and forEach function not return this is always
         undefined
       </p>
+      <div class="bg-slate-500 p-10 rounded-md">
+        <code>
+          let numbers = [1,2,3,4,5]
+          <br />
+          console.log(numbers.forEach(number => number % 2 === 0))
+          <br />
+          output: <span class="bg-slate-200 p-2 rounded-md">undefiend</span>
+        </code>
+      </div>
     </article>
 
     <article class="space-y-2">
@@ -52,6 +73,16 @@
         data filter function return empty array elsif match anything data <br />
         function return this result inner array
       </p>
+
+      <div class="bg-slate-500 p-10 rounded-md">
+        <code>
+          let numbers = [1,2,3,4,5]
+          <br />
+          console.log(numbers.filter(number => number % 2 === 0))
+          <br />
+          output : <span class="bg-slate-200 p-2 rounded-md">[2,4]</span>
+        </code>
+      </div>
     </article>
 
     <article class="space-y-2">
@@ -62,13 +93,61 @@
         first result match
       </p>
 
-      <code class="space-y-10">
-        let numbers = [1,2,3,4,5]
-        <br />
-        console.log(numbers.map(number => number%2 === 0))
-        <br />
-        output : 2
-      </code>
+      <div class="bg-slate-500 rounded-md p-10">
+        <code>
+          let numbers = [1,2,3,4,5]
+          <br />
+          console.log(numbers.map(number => number%2 === 0))
+          <br />
+          output : <span class="bg-slate-200 p-2 rounded-md">2</span>
+        </code>
+      </div>
+    </article>
+    <summary>
+      <span class="font-bold text-2xl"
+        >summary : in this tutorial i am learn javascript localStorage,
+        sessionStorage and cookie</span
+      >
+    </summary>
+    <article>
+      <code class="font-bold text-3xl">localStorage</code><br />
+      <p>
+        Local Storage is a Browser storage it is sort of data store browser
+        read-only The store capacity 5/10MB is is not session base it is deleted
+        by javascript or manually
+      </p>
+      <span class="font-bold text-2xl">localStorage Methods :</span>
+      <ul class="space-y-2">
+        <li>setItem() Method</li>
+        <li>getItem() Method</li>
+        <li>removeItem() Method</li>
+        <li>clear() Method</li>
+      </ul>
+    </article>
+    <article>
+      <code class="font-bold text-3xl">sessionStorage</code>
+      <br />
+      <p>
+        Session Storage is a session base that mens browser tab open for create
+        session if you close tab autometically remove session storage this is
+        store 5MB
+      </p>
+      <span class="font-bold text-2xl">localStorage Methods :</span>
+      <ul class="space-y-2">
+        <li>setItem() Method</li>
+        <li>getItem() Method</li>
+        <li>removeItem() Method</li>
+        <li>clear() Method</li>
+      </ul>
+    </article>
+    <article>
+      <code class="text-3xl font-bold">cookie</code>
+      <br />
+      <p>
+        cookie is store data settings , Tab and window basis. The storage
+        capacity 4KB cookie client and server both side read and write the
+        cookie
+      </p>
     </article>
   </body>
 </html>
